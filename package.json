@@ -1,4 +1,14 @@
 {
-  "name": "md-links",
-  "version": "0.1.0"
+  "name": "check-md-links",
+	"version": "0.1.0",
+	"description": "Markdown check links",
+  "main": "index.js",
+	"bin": {
+    "md-links": "./index.js"
+	},
+	"scripts": {
+    "test": "jest"
+	},
+	"author": "Shirley Startary",
+  "license": "MIT"
 }
