@@ -1,14 +1,20 @@
 {
-  "name": "check-md-links",
-	"version": "0.1.0",
-	"description": "Markdown check links",
-  "main": "index.js",
-	"bin": {
-    "md-links": "./index.js"
-	},
-	"scripts": {
-    "test": "jest"
-	},
-	"author": "Shirley Startary",
-  "license": "MIT"
+			"name": "check-md-links",
+			"version": "1.0.0",
+			"description": "Markdown check links",
+			"main": "index.js",
+			"bin": {
+						"check-md-links": "./cli.js"
+			},
+			"scripts": {
+						"test": "jest"
+			},
+			"author": "Shirley Startary",
+			"license": "MIT",
+			"dependencies": {
+						"marked": "^0.7.0",
+						"minimist": "^1.2.0",
+						"node-fetch": "^2.6.0",
+						"path": "^0.12.7"
+			}
 }
