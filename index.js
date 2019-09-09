@@ -3,7 +3,7 @@ const readFile = require('./lib/readFile');
 const mdLinksExtractor = require('./lib/mdLinkExtractor');
 const getStatusLink = require('./lib/processMD');
 
-module.exports = async (path = './', options) => {
+module.exports = async (path = './', { validate= null, stats= null}) => {
 	// ...
 	const collectionPathsMD = await traverse(path)
 	const collectionPromiseFile = await collectionPathsMD.map(readFile);
@@ -12,7 +12,7 @@ module.exports = async (path = './', options) => {
 		return [...memo, ...mdLinksExtractor(item.data,item.file)]
 	},[])
 
-	if (options.validate && options.stats) {
+	if (validate && stats) {
 		const stats = await Promise.all(getStatusLink(links));
 		
 		const status = {
